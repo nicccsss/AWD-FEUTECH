@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
           loginContainer.style.transform = "translate(-50%, -50%) scale(1)";
           loginContainer.style.opacity = "1";
         }, 100); // Adjust delay as needed
-      }, 5000); // Adjust delay as needed
-    }, 500); // Adjust delay as needed
+      }, 500); // Adjust delay as needed
+    }, 1000); // Adjust delay as needed
   }, 1000); // Adjust delay as needed
 
   // Add event listener to the login button
@@ -49,6 +49,17 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         // Display a message to the user indicating that fields are required
         alert("Please login first!");
+
+        function redirectToHome() {
+          document.body.classList.add('zoom-in'); // Add the zoom-in class
+          window.location.href = 'home.html';
+      }
+      
+      function redirectToArtist() {
+          document.body.classList.add('zoom-in'); // Add the zoom-in class
+          window.location.href = 'artist.html';
+      }
+
       }
     });
   }
