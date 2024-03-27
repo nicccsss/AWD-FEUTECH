@@ -1,14 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var heartImage = document.getElementById("heartImage");
-    var logoImage = document.getElementById("logoImage");
+    var container = document.getElementById("home");
+    container.classList.add("zoom-effect");
+    
+    function redirectToHome() {
+        document.body.classList.add('zoom-in'); // Add the zoom-in class
+        window.location.href = 'home.html';
+    }
+    
+    function redirectToBid() {
+        document.body.classList.add('zoom-in'); // Add the zoom-in class
+        window.location.href = 'bid.html';
+    }
 
-    // Show the heart image immediately
-    heartImage.style.opacity = "1";
+    function redirectToAuction() {
+        document.body.classList.add('zoom-in'); // Add the zoom-in class
+        window.location.href = 'auction.html';
+    }
+    
+    function redirectToArtist() {
+        document.body.classList.add('zoom-in'); // Add the zoom-in class
+        window.location.href = 'artist.html';
+    }
+// JavaScript to add class for showing paragraphs after "Welcome" is fully displayed
+window.onload = function () {
+    const paragraphs = document.getElementById("paragraphs");
+    setTimeout(function () {
+        paragraphs.classList.add("show");
+    }, 2000); // Adjust delay (milliseconds) according to the typing speed
+};
 
-    // After a short delay, hide the heart image and show the logo image
-    setTimeout(function() {
-        heartImage.style.opacity = "0";
-        logoImage.style.opacity = "1";
-        logoImage.style.transform = "translate(-50%, 0%)"; // Move logo to top middle
-    }, 1500); // Adjust delay as needed
+
 });

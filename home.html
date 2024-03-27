@@ -4,52 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistic Expressions Studio</title>
-<link rel="stylesheet" href="homestyles.css">
-<script src="homescript.js"></script>
-   
-
+    <link rel="stylesheet" href="homestyles.css">
+    <script src="homescript.js"></script>
 </head>
 <body>
     <header>
         <img class="header-image" src="logo.png" alt="Header Image">
     </header>
-    <nav>
-        <button id="homeBtn" onclick="redirectToHome()">Home</button>       
-        <button id="clothingBtn" onclick="redirectToBid()">Successful Bid</button>
-        <button id="distributorBtn" onclick="redirectToAuction()">Auction Now</button>       
-        <button id="distributorBtn" onclick="redirectToArtist()">Be an Artist</button>        
- 
-    </nav>
+    
 
 
-
-    <div id="home" class="container">
-        <img src="heart.gif" alt="Heart Image" id="heartImage">
-
-        <img src="logo.png" alt="Logo Image" id="logoImage">
-            <h2 class="show-on-load">Welcome!</h2>
-
-            <p>Welcome to Artistic Expressions Studio, your creative haven. We're a vibrant </p> <br>
-
-            <p>community of artists, united by our passion for expression. Whether you're a </p><br>
-        
-            <p>seasoned creator or just starting out, our studio provides the perfect space to </p><br>
-  
-            <p>explore, learn, and grow.  </p><br>
-     
-            <p>Join us as we celebrate the beauty of art and unleash the </p><br>
-            
-            <p>power of imagination together. </p><br>
-           
-
+    <div id="home" class="container zoom-effect">
+        <h2 class="show-on-load typing-animation">Welcome!</h2>
+        <p class="hidden" id="paragraphs">
+            Welcome to Artistic Expressions Studio, your creative haven.
+            We're a vibrant community of artists, united by our passion for expression.
+            Whether you're a seasoned creator or just starting out,
+            our studio provides the perfect space to explore, learn, and grow.
+            Join us as we celebrate the beauty of art and unleash
+            the power of imagination together.
+        </p>
     </div>
-  
+    <div class="container zoom-effect">
+        <img src=" " alt="Art 1">
+        <br>
+    <nav>
+        <button id="clothingBtn" onclick="window.location.href = 'bid.html'">MY SUCCESSFUL BID</button>
+    </nav></div>
+    <div class="container zoom-effect">
+        <img src="" alt="Art 1">
+        <br>
+    <nav>   
+        <button id="distributorBtn" onclick="window.location.href = 'auction.html'">AUCTION</button>       
+    </nav></div>
+    <div class="container zoom-effect">
+        <img src="girl.gif" alt="Art 1">
+        <br>
+    <nav>
+        <button id="distributorBtn" onclick="window.location.href = 'artist.html'">BE AN ARTIST</button>            
+    </nav></div>
 
+    <div class="container zoom-effect">
+        <h2>Contact us:</h2>
+        <p>Phone number: + 63 976 1804 707</p>
+        <p>Email: ArtisticExpressions@gmail.com</p>
+    </div>
 
     <footer>
         <p>&copy; 2024 Artistic Expressions Studio. All rights reserved.</p>
     </footer>
-
-
 </body>
 </html>

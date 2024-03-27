@@ -1,48 +1,34 @@
 body {
-        background-color: rgb(231, 223, 227);
-    background-size: cover;
+    background-image: url('bg.jpg');
+    background-color: rgb(203, 187, 203);
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Prevent background from moving */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative; /* Added relative positioning */
 }
 
 header {
     background: rgb(201, 175, 151);
     color: #fff;
     text-align: center;
-    padding: 10px;
+    width: 100%;
 }
 
 .header-image {
     display: block;
-    margin: 0 auto;
-    max-width: 100%; /* Adjusted the max-width to make it responsive */
-    height: auto;
-    animation: popIn 1s ease-out;
-}
-
-img {
-    width: 200px; /* Adjust width as needed */
+    margin: 20px auto; /* Adjust top and bottom margin as needed */
+    width: 100px; /* Keep the width of the header image */
     height: auto; /* Maintain aspect ratio */
-    transition: opacity 0.5s ease; /* Add transition for smooth fade-in and fade-out effects */
-    opacity: 0; /* Initially hide the images */
 }
 
-#logoImage {
-    position: absolute; /* Position the logo absolutely */
-    top: 20px; /* Adjust the value to move the logo up (e.g., 20px) */
-    left: 50%; /* Align the logo horizontally */
-    transform: translateX(-50%); /* Center the logo horizontally */
-    transition: margin-top 0.5s ease; /* Add transition for smooth movement */
-}
 nav {
-    background: #333;
+
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -54,11 +40,12 @@ nav {
 nav button {
     color: #fff;
     background-color: #c4b199;
+    font-family:sans-serif;
     border: none;
-    padding: 10px;
+    padding: 8px 12px; /* Adjusted padding */
     margin: 0 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px; /* Adjusted font size */
     font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.1s ease, border-radius 0.3s ease;
@@ -74,67 +61,31 @@ nav button:active {
 }
 
 h2 {
-    margin-top: 5%;
+    margin-top: 0%;
     color: #FFFFFF;
-    font-size: 60px;
+    font-size: 40px;
     transition: opacity 1s ease;
+   color: #333;
+   animation: popIn 1s ease-out;
+
 }
 
 .container {
-    background: rgba(36, 116, 136, 0.8);
-    max-width: 90vw; /* Adjusted the max-width to make it responsive */
-    margin: 10vw auto; /* Adjusted the margin to make it responsive */
-    padding: 6vw; /* Adjusted the padding to make it responsive */
+    max-width: 45vw;
+    margin: 10vw auto;
+    padding: 6vw;
     text-align: center;
+    background-color: rgba(236, 232, 228, 0.5);
+    border-radius: 10%;
+    transition: transform 1s;
+    animation: popIn 1s ease-out;
+    
+    
 }
 
-.container:hover {
-    animation: shake 0.5s ease-in-out;
-}
 
-.container p {
-    color: #fff;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    letter-spacing: 4px;
-    animation: typing 5s steps(40) forwards;
-    margin: 10px 0;
-    font-size: 20;
-    max-width: 90vw; /* Adjusted the max-width to make it responsive */
-}
-
-@keyframes shake {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    25%, 75% {
-        transform: translateX(-5px);
-    }
-    50% {
-        transform: translateX(5px);
-    }
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes popIn {
-    0% {
-        transform: scale(0);
-    }
-    80% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+.zoom-effect:hover {
+    transform: scale(1.1); /* Scale up the container on hover */
 }
 
 footer {
@@ -172,5 +123,33 @@ footer {
 
     .container p {
         max-width: 80vw;
+        
+    }
+    .element {
+        animation: popIn 1s ease-out;
     }
 }
+
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s ease-in-out;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+

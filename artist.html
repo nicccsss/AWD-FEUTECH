@@ -2,10 +2,10 @@
 <html>
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Mystique Threads - Be a seller!</title>
+	<title>BE AN ARTIST!</title>
 	<link rel="stylesheet" type="text/css" href="distributor.css">
 	<link rel="stylesheet" href="artist.css">
-	<script src="script.js"></script>
+	<script src="artist.js"></script>
 
 	</head>
 	
@@ -14,20 +14,19 @@
 			<img class="header-image" src="logo.png" alt="Header Image">        
 		</header>
 		<nav>
-			<button id="homeBtn" onclick="redirectToHome()">Home</button>       
-			<button id="clothingBtn" onclick="redirectToBid()">Successful Bid</button>
-			<button id="distributorBtn" onclick="redirectToAuction()">Auction Now</button>       
-			<button id="distributorBtn" onclick="redirectToArtist()">Be an Artist</button>        
-	 
+			<button id="homeBtn" onclick="window.location.href = 'home.html'">HOME</button>       
+			<button id="clothingBtn" onclick="window.location.href = 'bid.html'">MY SUCCESSFUL BID</button>
+			<button id="distributorBtn" onclick="window.location.href = 'auction.html'">AUCTION</button>       
+			<button id="distributorBtn" onclick="window.location.href = 'artist.html'">BE AN ARTIST</button>            
 		</nav>
 		<div class="container">
 			
 			<div class="formBx">
-				<form action="index.html" method="get">
+				<form action="artist.html" method="get">
                   
 
 					<br><br>
-					<h2>Be a seller now!</h2>
+					<h2>Be an Artist!</h2>
 		
 					<div class="inputBox">
 						<input type="text" name="" required="required">
@@ -63,7 +62,7 @@
 						<label class="custom-file-upload">
 							<input type="file" name="validId" id="validId" accept=".pdf, .doc, .docx, .jpg, .jpeg, .png" onchange="updateAttachmentLabel(this)">
 							<br><br>
-							Attach File
+						
 						</label>
 						<span id="attachmentLabel">No file attached</span>
 					</div>

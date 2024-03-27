@@ -50,15 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Display a message to the user indicating that fields are required
         alert("Please login first!");
 
-        function redirectToHome() {
-          document.body.classList.add('zoom-in'); // Add the zoom-in class
-          window.location.href = 'home.html';
-      }
-      
-      function redirectToArtist() {
-          document.body.classList.add('zoom-in'); // Add the zoom-in class
-          window.location.href = 'artist.html';
-      }
 
       }
     });
