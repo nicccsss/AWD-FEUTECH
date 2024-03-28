@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if (usernameInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
         // Redirect to the desired URL if the fields are not empty
-        window.location.href = "home.html";
+        window.location.href = "home/home.html";
       } else {
         // Display a message to the user indicating that fields are required
         alert("Please login first!");
@@ -55,3 +55,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
